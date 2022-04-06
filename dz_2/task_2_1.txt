@@ -1,0 +1,41 @@
+1. Навигация по файловой системе. 
+Попрактиковаться в перемещении между каталогами, используя полный и относительный путь. 
+Перечислить, какие параметры команды cd позволят быстро вернуться в домашний каталог, позволят перейти на уровень выше.
+
+
+ivan@Frvzr:~$ pwd    #определяем в каком каталоге находимся
+/home/ivan
+
+ivan@Frvzr:~$ ls    #определяем какие папки присутствуют в каталоге
+Desktop    Downloads       Music     Public  Templates
+Documents  gedit_test.txt  Pictures  snap    Videos
+
+ivan@Frvzr:~$ cd Documents    #заходим в папку Documents
+
+ivan@Frvzr:~/Documents$ mkdir linux_homework    #создаем общую папку для ДЗ
+ivan@Frvzr:~/Documents$ mkdir linux_homework/Koposhilov_Ivan_dz_02    #создаем папку для ДЗ №2
+ivan@Frvzr:~/Documents$ cd linux_homework/Koposhilov_Ivan_dz_02    #переходим в каталог
+ivan@Frvzr:~/Documents/linux_homework/Koposhilov_Ivan_dz_02$ touch task_2_1.txt #создаем текстовый файл
+
+ivan@Frvzr:~/Documents/linux_homework/Koposhilov_Ivan_dz_02$ cd ..     #переходим на одну папку вверх
+ivan@Frvzr:~/Documents/linux_homework$ cd -    #возращаемся в предыдущую папку
+/home/ivan/Documents/linux_homework/Koposhilov_Ivan_dz_02
+
+ivan@Frvzr:~/Documents/linux_homework/Koposhilov_Ivan_dz_02$ cd ../../    #переходим вверх на 2 уровня
+ivan@Frvzr:~/Documents$ cd    #возвращаемся в домашний каталог
+ivan@Frvzr:~$ pwd    #определяем в каком каталоге находимся
+/home/ivan
+ivan@Frvzr:~$ cd Documents/linux_homework/Koposhilov_Ivan_dz_02     #заходим в конкретную папку
+ivan@Frvzr:~/Documents/linux_homework/Koposhilov_Ivan_dz_02$ 
+ivan@Frvzr:~/Documents/linux_homework/Koposhilov_Ivan_dz_02$ cd ~     #возвращаемся в домашний каталог
+ivan@Frvzr:~$ 
+
+ivan@Frvzr:~$ cd /
+ivan@Frvzr:/$ cd ./home/ivan/Documents
+van@Frvzr:~/Documents$ 
+
+
+
+cd ~ и cd  -  поволяют быстро вернуться в домашний каталог
+cd .. и cd ../../   -  позволяет вернуться вверх на 1 и 2 уровня выше соответственно
+cd -  -  позволяет переместиться в предыдущую папку

@@ -1,0 +1,32 @@
+2. Управление файлами и каталогами и текстовые редакторы. 
+Создать файл с наполнением, используя несколько способов. 
+Использовать разобранные текстовые редакторы для наполнения файлов данными. 
+Создать копии созданных файлов, создать несколько каталогов с подкаталогами, перенести несколько файлов в созданные каталоги. 
+Перечислить команды и используемые параметры команд.
+
+
+ivan@Frvzr:~/Documents$ mkdir linux_homework    #создаем общую папку для ДЗ
+ivan@Frvzr:~/Documents$ mkdir linux_homework/Koposhilov_Ivan_dz_02    #создаем папку для ДЗ №2
+ivan@Frvzr:~/Documents$ cd linux_homework/Koposhilov_Ivan_dz_02    #переходим в каталог
+
+ivan@Frvzr:~/Documents/linux_homework/Koposhilov_Ivan_dz_02$ nano task_2_2.txt
+file created from nano
+
+ivan@Frvzr:~/Documents/linux_homework/Koposhilov_Ivan_dz_02$ cp task_2_1.txt task_2_1_copy.txt
+ivan@Frvzr:~/Documents/linux_homework/Koposhilov_Ivan_dz_02$ rm task_2_1_copy.txt
+ivan@Frvzr:~/Documents/linux_homework/Koposhilov_Ivan_dz_02$ touch file.txt
+ivan@Frvzr:~/Documents/linux_homework/Koposhilov_Ivan_dz_02$ mv file.txt home/ivan/
+
+ivan@Frvzr:~$ vim task_2_2_vim.txt
+Hello, file created from Vim
+
+
+
+ls - список файлов в директории
+cd - переход между директориями
+rm - удалить файл
+rmdir - удалить папку
+mv - переместить файл
+cp - скопировать файл
+mkdir - создать папку
+touch - создать пустой файл
