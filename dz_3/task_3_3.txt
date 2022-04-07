@@ -1,0 +1,14 @@
+ubuntu@ubuntuvbx:~/Desktop$ sudo adduser superuser
+superuser@ubuntuvbx:/home/ubuntu/Desktop$ sudo whoami
+[sudo] password for superuser: 
+superuser is not in the sudoers file.  This incident will be reported.
+ubuntu@ubuntuvbx:~/Desktop$ sudo usermod -aG sudo superuser
+ubuntu@ubuntuvbx:~/Desktop$ su superuser
+Password: 
+superuser@ubuntuvbx:/home/ubuntu/Desktop$ sudo whoami
+[sudo] password for superuser: 
+root
+
+superuser@ubuntuvbx:/home/ubuntu/Desktop$ sudo visudo
+superuser ALL=(ALL) NOPASSWD: ALL
+
