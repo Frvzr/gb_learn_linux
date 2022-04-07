@@ -1,0 +1,78 @@
+a)
+ubuntu@ubuntuvbx:~$ sudo useradd -p 1 -s /bin/bash test
+ubuntu@ubuntuvbx:~$ tail /etc/passwd
+geoclue:x:122:127::/var/lib/geoclue:/usr/sbin/nologin
+pulse:x:123:128:PulseAudio daemon,,,:/var/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:124:65534::/run/gnome-initial-setup/:/bin/false
+gdm:x:125:130:Gnome Display Manager:/var/lib/gdm3:/bin/false
+sssd:x:126:131:SSSD system user,,,:/var/lib/sss:/usr/sbin/nologin
+ubuntu:x:1000:1000:ubuntu,,,:/home/ubuntu:/bin/bash
+systemd-coredump:x:999:999:systemd Core Dumper:/:/usr/sbin/nologin
+sshd:x:127:65534::/run/sshd:/usr/sbin/nologin
+user2:x:1002:1002::/home/user2:/bin/sh
+test:x:1003:1003::/home/test:/bin/bash
+
+
+b)
+ubuntu@ubuntuvbx:~$ sudo userdel test
+ubuntu@ubuntuvbx:~$ tail /etc/passwd
+colord:x:121:126:colord colour management daemon,,,:/var/lib/colord:/usr/sbin/nologin
+geoclue:x:122:127::/var/lib/geoclue:/usr/sbin/nologin
+pulse:x:123:128:PulseAudio daemon,,,:/var/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:124:65534::/run/gnome-initial-setup/:/bin/false
+gdm:x:125:130:Gnome Display Manager:/var/lib/gdm3:/bin/false
+sssd:x:126:131:SSSD system user,,,:/var/lib/sss:/usr/sbin/nologin
+ubuntu:x:1000:1000:ubuntu,,,:/home/ubuntu:/bin/bash
+systemd-coredump:x:999:999:systemd Core Dumper:/:/usr/sbin/nologin
+sshd:x:127:65534::/run/sshd:/usr/sbin/nologin
+user2:x:1002:1002::/home/user2:/bin/sh
+
+
+ubuntu@ubuntuvbx:~$ sudo adduser test
+Adding user `test' ...
+Adding new group `test' (1001) ...
+Adding new user `test' (1001) with group `test' ...
+Creating home directory `/home/test' ...
+Copying files from `/etc/skel' ...
+New password: 
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for test
+Enter the new value, or press ENTER for the default
+	Full Name []: Iv
+	Room Number []: Ko
+	Work Phone []: 912
+	Home Phone []: 385
+	Other []: 2103
+Is the information correct? [Y/n] y
+ubuntu@ubuntuvbx:~$ tail /etc/passwd
+geoclue:x:122:127::/var/lib/geoclue:/usr/sbin/nologin
+pulse:x:123:128:PulseAudio daemon,,,:/var/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:124:65534::/run/gnome-initial-setup/:/bin/false
+gdm:x:125:130:Gnome Display Manager:/var/lib/gdm3:/bin/false
+sssd:x:126:131:SSSD system user,,,:/var/lib/sss:/usr/sbin/nologin
+ubuntu:x:1000:1000:ubuntu,,,:/home/ubuntu:/bin/bash
+systemd-coredump:x:999:999:systemd Core Dumper:/:/usr/sbin/nologin
+sshd:x:127:65534::/run/sshd:/usr/sbin/nologin
+user2:x:1002:1002::/home/user2:/bin/sh
+test:x:1001:1001:Iv,Ko,912,385,2103:/home/test:/bin/bash
+
+
+c)
+ubuntu@ubuntuvbx:~$ sudo mkdir /home/test2
+ubuntu@ubuntuvbx:~$ sudo vipw -p
+user2:x:1002:1002::/home/user2:/bin/sh
+test:x:1001:1001:Iv,Ko,912,385,2103:/home/test:/bin/bash
+test2:x:1003:1003::/home/test2:/bin/bash
+ubuntu@ubuntuvbx:~$ tail /etc/passwd
+pulse:x:123:128:PulseAudio daemon,,,:/var/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:124:65534::/run/gnome-initial-setup/:/bin/false
+gdm:x:125:130:Gnome Display Manager:/var/lib/gdm3:/bin/false
+sssd:x:126:131:SSSD system user,,,:/var/lib/sss:/usr/sbin/nologin
+ubuntu:x:1000:1000:ubuntu,,,:/home/ubuntu:/bin/bash
+systemd-coredump:x:999:999:systemd Core Dumper:/:/usr/sbin/nologin
+sshd:x:127:65534::/run/sshd:/usr/sbin/nologin
+user2:x:1002:1002::/home/user2:/bin/sh
+test:x:1001:1001:Iv,Ko,912,385,2103:/home/test:/bin/bash
+test2:x:1003:1003::/home/test2:/bin/bash
+

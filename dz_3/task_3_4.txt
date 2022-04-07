@@ -1,0 +1,3 @@
+ubuntu@ubuntuvbx:~$ sudo visudo
+superpuuper ALL=(ALL) NOPASSWD: /sbin/reboot
+

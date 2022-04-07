@@ -1,0 +1,28 @@
+a)
+ubuntu@ubuntuvbx:~$ sudo vipw -g
+test5:x:1005:
+
+
+b)
+ubuntu@ubuntuvbx:~$ sudo groupadd firstgroup
+ubuntu@ubuntuvbx:~$ sudo usermod -g firstgroup test
+ubuntu@ubuntuvbx:~$ su test
+Password: 
+test@ubuntuvbx:/home/ubuntu$ id
+uid=1001(test) gid=1006(firstgroup) groups=1006(firstgroup)
+
+c)
+sudo usermod -a -G firstgroup user3
+ubuntu@ubuntuvbx:~/Desktop$ su user3
+user3@ubuntuvbx:/home/ubuntu/Desktop$ id
+uid=1004(user3) gid=1004(user3) groups=1004(user3),1006(firstgroup)
+
+d)
+ubuntu@ubuntuvbx:~/Desktop$ sudo deluser user3 firstgroup
+Removing user `user3' from group `firstgroup' ...
+Done.
+ubuntu@ubuntuvbx:~/Desktop$ su user3
+Password: 
+user3@ubuntuvbx:/home/ubuntu/Desktop$ id
+uid=1004(user3) gid=1004(user3) groups=1004(user3)
+
