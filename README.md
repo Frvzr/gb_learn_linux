@@ -1,4 +1,3 @@
-# gb_learn_linux
 ## Geek University Python-разработки, Курс «Linux. Рабочая станция»
 
 ### Урок 1. Введение. Установка ОС
