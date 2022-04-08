@@ -1,0 +1,15 @@
+ubuntu@ubuntuvbx:~/Desktop$ mc
+
+ubuntu@ubuntuvbx:~/Desktop$ ps
+    PID TTY          TIME CMD
+   8004 pts/0    00:00:00 bash
+   8530 pts/0    00:00:00 nano
+   9919 pts/0    00:00:00 ps
+ubuntu@ubuntuvbx:~/Desktop$ kill -9 8530
+[1]+  Killed                  nano etc/ssh/sshd_config  (wd: ~)
+(wd now: ~/Desktop)
+ubuntu@ubuntuvbx:~/Desktop$ ps
+    PID TTY          TIME CMD
+   8004 pts/0    00:00:00 bash
+   9920 pts/0    00:00:00 ps
+
