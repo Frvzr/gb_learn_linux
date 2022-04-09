@@ -1,0 +1,21 @@
+ubuntu@ubuntuvbx:~/dz_5$ mv file2.txt task_5_2.txt
+ubuntu@ubuntuvbx:~/dz_5$ ls -li
+total 12
+417921 lrwxrwxrwx 1 ubuntu ubuntu    9 мар 28 16:08 file3.txt -> file1.txt
+417225 -rw-rw-r-- 1 ubuntu ubuntu   32 мар 28 08:36 file4.txt
+417876 -rw-rw-r-- 1 ubuntu ubuntu 2182 мар 28 16:17 Koposhilov_Ivan_task_5_1.txt
+417923 -rw-rw-r-- 1 ubuntu ubuntu   32 мар 28 16:22 task_5_2.txt
+
+
+ubuntu@ubuntuvbx:~/dz_5$ mkdir testdir 
+ubuntu@ubuntuvbx:~/dz_5$ ls
+file3.txt  Koposhilov_Ivan_task_5_1.txt  link_task.txt  testdir
+file4.txt  Koposhilov_Ivan_task_5_2.txt  task_5_2.txt
+ubuntu@ubuntuvbx:~/dz_5$ mv link_task.txt testdir/
+ubuntu@ubuntuvbx:~/dz_5$ cd testdir/
+ubuntu@ubuntuvbx:~/dz_5/testdir$ ls -li
+total 0
+417928 lrwxrwxrwx 1 ubuntu ubuntu 12 мар 28 16:26 link_task.txt -> task_5_2.txt
+ubuntu@ubuntuvbx:~/dz_5/testdir$ cat link_task.txt 
+cat: link_task.txt: No such file or directory
+
