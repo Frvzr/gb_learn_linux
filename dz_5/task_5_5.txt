@@ -1,0 +1,30 @@
+ubuntu@ubuntuvbx:~/dz_5/developers$ mkdir shared
+ubuntu@ubuntuvbx:~/dz_5/developers$ ls -la
+total 16
+drwxrwxrwx 3 ubuntu developer 4096 мар 29 08:25 .
+drwxrwxr-x 4 ubuntu ubuntu    4096 мар 29 08:24 ..
+drwxrwxr-x 2 ubuntu ubuntu    4096 мар 29 08:25 shared
+-rw-rw-r-- 1 ubuntu ubuntu       0 мар 29 08:16 test
+-rw-r--r-- 1 root   root         0 мар 29 08:16 test1
+-rw-rw-r-- 1 dev1   dev1        11 мар 29 08:21 test_dev1.txt
+ubuntu@ubuntuvbx:~/dz_5/developers$ chown :developer shared
+ubuntu@ubuntuvbx:~/dz_5/developers$ sudo chown :developer shared
+ubuntu@ubuntuvbx:~/dz_5/developers$ ls -la
+total 16
+drwxrwxrwx 3 ubuntu developer 4096 мар 29 08:25 .
+drwxrwxr-x 4 ubuntu ubuntu    4096 мар 29 08:24 ..
+drwxrwxr-x 2 ubuntu developer 4096 мар 29 08:25 shared
+-rw-rw-r-- 1 ubuntu ubuntu       0 мар 29 08:16 test
+-rw-r--r-- 1 root   root         0 мар 29 08:16 test1
+-rw-rw-r-- 1 dev1   dev1        11 мар 29 08:21 test_dev1.txt
+ubuntu@ubuntuvbx:~/dz_5/developers$ sudo chmod ugo+t shared
+ubuntu@ubuntuvbx:~/dz_5/developers$ ls -la
+total 16
+drwxrwxrwx 3 ubuntu developer 4096 мар 29 08:25 .
+drwxrwxr-x 4 ubuntu ubuntu    4096 мар 29 08:24 ..
+drwxrwxr-t 2 ubuntu developer 4096 мар 29 08:25 shared
+-rw-rw-r-- 1 ubuntu ubuntu       0 мар 29 08:16 test
+-rw-r--r-- 1 root   root         0 мар 29 08:16 test1
+-rw-rw-r-- 1 dev1   dev1        11 мар 29 08:21 test_dev1.txt
+ubuntu@ubuntuvbx:~/dz_5/developers$ 
+
