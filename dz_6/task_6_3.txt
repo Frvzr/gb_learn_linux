@@ -1,0 +1,34 @@
+ubuntu@ubuntuvbx:~/Desktop/dz/dz_6/test$ pwd
+/home/ubuntu/Desktop/dz/dz_6/test
+ubuntu@ubuntuvbx:~/Desktop/dz/dz_6/test$ ls -la | awk '{print $1}'
+total
+drwxrwxr-x
+drwxrwxr-x
+drwxrwxr-x
+drwxrwxr-x
+drwxrwxr-x
+drwxrwxr-x
+drwxrwxr-x
+drwxrwxr-x
+drwxrwxr-x
+drwxrwxr-x
+-rw-rw-r--
+ubuntu@ubuntuvbx:~/Desktop/dz/dz_6/test$ ls -la | awk '{print $1}' | sort
+drwxrwxr-x
+drwxrwxr-x
+drwxrwxr-x
+drwxrwxr-x
+drwxrwxr-x
+drwxrwxr-x
+drwxrwxr-x
+drwxrwxr-x
+drwxrwxr-x
+drwxrwxr-x
+-rw-rw-r--
+total
+ubuntu@ubuntuvbx:~/Desktop/dz/dz_6/test$ ls -la | awk '{print $1}' | sort | uniq
+drwxrwxr-x
+-rw-rw-r--
+total
+ubuntu@ubuntuvbx:~/Desktop/dz/dz_6/test$ 
+

@@ -1,0 +1,4 @@
+ubuntu@ubuntuvbx:~$ echo '/usr/sbin/shutdown -r now' | at 13:26
+warning: commands will be executed using /bin/sh
+job 15 at Sun Apr  3 13:26:00 2022
+

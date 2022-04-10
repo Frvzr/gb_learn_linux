@@ -1,0 +1,8 @@
+backup_etc.sh 
+#!/bin/bash
+tar -cvzf /home/ubuntu/Desktop/dz/backup-$(date +"%d.%m.%y").tar.gz /etc/
+
+
+ubuntu@ubuntuvbx:~$ crontab -e
+0 8 * * * /home/ubuntu/Desktop/dz/dz_6/backup_etc.sh >> /home/ubuntu/Desktop/dz/backuplog.log
+

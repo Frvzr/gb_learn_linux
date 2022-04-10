@@ -1,0 +1,7 @@
+ubuntu@ubuntuvbx:~/Desktop/dz/dz_6$ grep ssh /var/log/syslog >> task_6_4.txt
+
+Apr  3 07:56:17 ubuntuvbx systemd[810]: Listening on GnuPG cryptographic agent (ssh-agent emulation).
+Apr  3 07:56:20 ubuntuvbx systemd[810]: ssh-agent.service: Succeeded.
+Apr  3 07:56:20 ubuntuvbx gnome-keyring-ssh.desktop[1163]: SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+Apr  3 07:56:20 ubuntuvbx gnome-keyring-pkcs11.desktop[1161]: SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+Apr  3 07:56:20 ubuntuvbx gnome-keyring-secrets.desktop[1164]: SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
