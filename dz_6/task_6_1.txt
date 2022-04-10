@@ -1,0 +1,24 @@
+ubuntu@ubuntuvbx:~/Desktop/dz/dz_6$ cat text.txt
+У этого текста надо убрать все пробелы и заменить маленькие символы на большие
+ubuntu@ubuntuvbx:~/Desktop/dz/dz_6$ tr -d [:blank:] < text.txt > text2.txt 
+ubuntu@ubuntuvbx:~/Desktop/dz/dz_6$ cat text2.txt
+Уэтоготекстанадоубратьвсепробелыизаменитьмаленькиесимволынабольшие
+
+
+ubuntu@ubuntuvbx:~/Desktop/dz/dz_6$ echo "hello" | sed 's/[a-z]/\U&/g'
+HELLO
+
+ubuntu@ubuntuvbx:~/Desktop/dz/dz_6$ sudo sed 's/.*/\U&/g' ./text3.txt
+У ЭТОГО ТЕКСТА НАДО УБРАТЬ ВСЕ ПРОБЕЛЫ И ЗАМЕНИТЬ МАЛЕНЬКИЕ СИМВОЛЫ НА БОЛЬШИЕ
+ubuntu@ubuntuvbx:~/Desktop/dz/dz_6$ sed 's/[а-я]/\U&/g' ./text3.txt
+У ЭТОГО ТЕКСТА НАДО УБРАТЬ ВСЕ ПРОБЕЛЫ И ЗАМЕНИТЬ МАЛЕНЬКИЕ СИМВОЛЫ НА БОЛЬШИЕ
+
+ubuntu@ubuntuvbx:~/Desktop/dz/dz_6$ tr а-я А-Я < text3.txt
+�� ���������� ������������ �������� ������������ ������ �������������� �� ���������������� ������������������ �������������� ���� ��������������
+ubuntu@ubuntuvbx:~/Desktop/dz/dz_6$ tr а-я А-Я < text3.txt > text4.txt
+ubuntu@ubuntuvbx:~/Desktop/dz/dz_6$ cat text4.txt
+�� ���������� ������������ �������� ������������ ������ �������������� �� ���������������� ������������������ �������������� ���� ��������������
+ubuntu@ubuntuvbx:~/Desktop/dz/dz_6$ tr a-z A-Z < text3.txt
+У этого текста надо убрать все пробелы и заменить маленькие символы на большие
+ENGLISH WORDS
+
