@@ -1,0 +1,23 @@
+ubuntu@ubuntuvbx:~$ sudo iptables -L
+Chain INPUT (policy DROP)
+target     prot opt source               destination         
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination     
+
+ubuntu@ubuntuvbx:~$ sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+ubuntu@ubuntuvbx:~$ sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+ubuntu@ubuntuvbx:~$ sudo iptables -L
+Chain INPUT (policy DROP)
+target     prot opt source               destination         
+ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:http
+ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:ssh
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination   

@@ -1,0 +1,16 @@
+ubuntu@ubuntuvbx:~/Desktop/dz/dz_7$ sudo apt update
+ubuntu@ubuntuvbx:~/Desktop/dz/dz_7$ sudo apt install nginx
+
+ubuntu@ubuntuvbx:~/Desktop/dz/dz_7$ sudo dpkg -r nginx
+
+ubuntu@ubuntuvbx:~/Desktop/dz/dz_7$ echo "deb http://nginx.org/packages/mainline/ubuntu`lsb_release -cs`nginx" | sudo tee /etc/apt/sources.list.d/nginx.list
+deb http://nginx.org/packages/mainline/ubuntufocalnginx
+ubuntu@ubuntuvbx:~$ curl -faSL https://nginx.org/keys/nginx_signing.key | sudo apt-key add -
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  1561  100  1561    0     0    512      0  0:00:03  0:00:03 --:--:--   512
+OK
+
+ubuntu@ubuntuvbx:~$ sudo apt update
+sudo apt install nginx
+
