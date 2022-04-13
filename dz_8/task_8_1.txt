@@ -1,0 +1,27 @@
+ubuntu@ubuntuvbx:~/Desktop/dz$ sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y
+
+ubuntu@ubuntuvbx:~/Desktop/dz$ sudo su -
+root@ubuntuvbx:~# curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+OK
+
+ubuntu@ubuntuvbx:~/Desktop/dz$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+ubuntu@ubuntuvbx:~/Desktop/dz$ sudo apt update
+
+ubuntu@ubuntuvbx:~/Desktop/dz$ sudo apt install docker-ce -y
+
+ubuntu@ubuntuvbx:~/Desktop/dz$ docker version
+Client: Docker Engine - Community
+ Version:           20.10.14
+ API version:       1.41
+ Go version:        go1.16.15
+ Git commit:        a224086
+ Built:             Thu Mar 24 01:48:02 2022
+ OS/Arch:           linux/amd64
+ Context:           default
+ Experimental:      true
+
+ubuntu@ubuntuvbx:~/Desktop/dz$ sudo docker run hello-world
+
+ubuntu@ubuntuvbx:~/Desktop/dz$ sudo docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES

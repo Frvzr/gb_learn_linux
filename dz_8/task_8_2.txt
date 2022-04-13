@@ -1,0 +1,10 @@
+ubuntu@ubuntuvbx:~/Desktop/dz$ sudo docker run --name Ubuntu1804 ubuntu:18.04
+
+ubuntu@ubuntuvbx:~/Desktop/dz$ sudo docker ps -a
+CONTAINER ID   IMAGE          COMMAND    CREATED          STATUS                      PORTS     NAMES
+f4b446bfd7e2   ubuntu:18.04   "bash"     17 seconds ago   Exited (0) 16 seconds ago             Ubuntu1804
+b501fd794dd5   hello-world    "/hello"   5 minutes ago    Exited (0) 5 minutes ago              friendly_wilson
+
+ubuntu@ubuntuvbx:~/Desktop/dz$ sudo docker start Ubuntu1804
+Ubuntu1804
+
